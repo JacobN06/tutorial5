@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 public class Playlist {
@@ -5,6 +6,13 @@ public class Playlist {
     private ArrayList<String> tracksInPlaylist= new ArrayList<>();
 
 
+
+
+    public Playlist(String playlistName) {
+        this.playlistName = playlistName;
+        this.tracksInPlaylist = new ArrayList<>();
+
+    }
 
     public String getPlaylistName() {
         return playlistName;
@@ -19,14 +27,17 @@ public class Playlist {
         this.tracksInPlaylist = Tracks;
     }
 
-    public Playlist(String playlistName) {
-        this.playlistName = playlistName;
+    //public void  addSongToPlaylist(String track) {
+      //  if(musicLibrary.getTracksCollection().contains(track)) {
+        //    tracksInPlaylist.add(track);
+          //  System.out.println("Song Added to Playlist");
+        //}
+        //else {
+          //  System.out.println("Song Not Added to Playlist, could not be found in MusicLibrary");
+        //}
 
-    }
 
-    public void  addSongToPlaylist(String track) {
-        tracksInPlaylist.add(track);
-    }
+    //}
 
     public void removeSongFromPlaylist(String track) {
         tracksInPlaylist.remove(track);
